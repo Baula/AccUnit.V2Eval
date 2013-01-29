@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Reflection;
 
-namespace AccessCodeLib.AccUnit.V2Eval
+namespace AccessCodeLib.AccUnit.V2Eval.ComTools
 {
     public static class DispatchUtility
     {

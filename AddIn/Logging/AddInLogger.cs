@@ -1,4 +1,5 @@
-﻿using AccessCodeLib.AccUnit.V2Eval;
+﻿using AccessCodeLib.AccUnit.V2Eval.AddIn;
+using AccessCodeLib.AccUnit.V2Eval.Logging;
 using Microsoft.Vbe.Interop;
 using System;
 using System.Collections.Generic;
@@ -6,22 +7,15 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace AccessCodeLib.AccUnit.V2Eval.Logging
+namespace AccessCodeLib.AccUnit.V2Eval.AddIn.Logging
 {
-    interface ILogger
+    interface IAddInLogger : ILogger
     {
-        void Log(string message);
-
         void LogVbProjects(VBE vbe);
     }
 
-    class Logger : ILogger
+    class AddInLogger : Logger, IAddInLogger
     {
-        public void Log(string message)
-        {
-            Debug.WriteLine("AccUnit.V2Eval: " + message);
-        }
-
         public void LogVbProjects(VBE vbe)
         {
             foreach (VBProject vbProject in vbe.VBProjects)

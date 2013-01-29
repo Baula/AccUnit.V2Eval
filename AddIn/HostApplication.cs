@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace AccessCodeLib.AccUnit.V2Eval
+namespace AccessCodeLib.AccUnit.V2Eval.AddIn
 {
     class HostApplication
     {
